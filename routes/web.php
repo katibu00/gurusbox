@@ -20,3 +20,9 @@ Route::get('/', function () {
 Route::get('/back', function () {
     return view('back.admin.index');
 });
+
+
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(){
+   
+
+});
