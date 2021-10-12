@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FrontPageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,12 +18,18 @@ Route::get('/', function () {
     return view('front.index');
 });
 
-Route::get('/back', function () {
-    return view('back.admin.index');
-});
+// Route::get('/back', function () {
+//     return view('back.admin.index');
+// });
+
+Route::get('/about-us', [FrontPageController::class, 'about'])->name('about');
+Route::get('/contact-us', [FrontPageController::class, 'contact'])->name('contact');
+Route::get('/blog', [FrontPageController::class, 'blog'])->name('blog');
+Route::get('/courses', [FrontPageController::class, 'courses'])->name('courses');
+Route::get('/course/details/{id}', [FrontPageController::class, 'course_details'])->name('course.details');
 
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(){
-   
+
 
 });
