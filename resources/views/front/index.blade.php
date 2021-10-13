@@ -1,4 +1,6 @@
-@include('front.layouts.master')
+@extends('front.layouts.master')
+@section('PageTitle', 'Home')
+@section('content')
 
 
         <div class="stricky-header stricked-menu main-menu">
@@ -1191,4 +1193,4 @@
         </section>
         <!--Blog One End-->
 
-        @include('front.layouts.footer')
+    @endsection
