@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ChooseRoleController;
 use App\Http\Controllers\FrontPageController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,3 +41,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function(
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/choose', [ChooseRoleController::class, 'choose'])->name('choose');
+
+Route::get('/admin', [HomeController::class, 'admin'])->name('admin');

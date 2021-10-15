@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dGurusbox - @yield('PageTitle')</title>
+    <title>dGuruBoss - @yield('PageTitle')</title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png" />
@@ -132,8 +132,8 @@
                                     <div class="main-menu__right">
                                         <div class="main-menu__right-login-register">
                                             <ul class="list-unstyled">
-                                                <li><a href="#">Login</a></li>
-                                                <li><a href="#">Register</a></li>
+                                                <li><a href="{{ route('login') }}">Login</a></li>
+                                                <li><a href="{{ route('register') }}">Register</a></li>
                                             </ul>
                                         </div>
                                         <div class="main-menu__right-cart-search">
